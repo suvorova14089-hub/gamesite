@@ -1,0 +1,1450 @@
+/* =========================================================
+   GUARDIAN'S OATH
+   Main Stylesheet
+
+   No external CSS libraries are used.
+   ========================================================= */
+
+
+/* =========================================================
+   CSS VARIABLES
+   Change these colors to quickly redesign the website.
+   ========================================================= */
+
+:root {
+    --background: #080b10;
+    --background-light: #10151d;
+    --background-card: #141a24;
+
+    --text: #f4f1e8;
+    --text-muted: #9ca5b4;
+
+    --gold: #e8b75a;
+    --gold-light: #ffd881;
+    --blue: #74d7ff;
+
+    --border: rgba(255, 255, 255, 0.1);
+
+    --container-width: 1200px;
+}
+
+
+/* =========================================================
+   RESET / GLOBAL STYLES
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background:
+        radial-gradient(
+            circle at top,
+            #121925 0%,
+            var(--background) 45%
+        );
+
+    color: var(--text);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+.container {
+    width: min(90%, var(--container-width));
+    margin-inline: auto;
+}
+
+
+.section {
+    padding: 110px 0;
+}
+
+
+/* =========================================================
+   TEXT
+   ========================================================= */
+
+.section-label,
+.eyebrow {
+    color: var(--gold);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.25rem;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+
+h1 {
+    max-width: 900px;
+
+    font-size: clamp(
+        3rem,
+        8vw,
+        7rem
+    );
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 30px;
+}
+
+
+h1 span,
+h2 span {
+    color: var(--gold);
+}
+
+
+h2 {
+    font-size: clamp(
+        2.4rem,
+        5vw,
+        4.8rem
+    );
+
+    letter-spacing: -0.03em;
+
+    margin-bottom: 25px;
+}
+
+
+h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+
+p {
+    color: var(--text-muted);
+}
+
+
+.section-heading {
+    max-width: 760px;
+    margin-bottom: 55px;
+}
+
+
+.section-heading p:last-child {
+    max-width: 650px;
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    padding: 20px 0;
+
+    transition:
+        background 0.3s ease,
+        padding 0.3s ease,
+        backdrop-filter 0.3s ease;
+}
+
+
+.header.scrolled {
+    padding: 12px 0;
+
+    background: rgba(8, 11, 16, 0.9);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-weight: 900;
+    font-size: 1.35rem;
+    letter-spacing: -0.03em;
+}
+
+
+.logo span {
+    color: var(--gold);
+}
+
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.nav a {
+    color: #d5d9df;
+
+    font-size: 0.9rem;
+
+    transition: color 0.2s ease;
+}
+
+
+.nav a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
+
+.menu-toggle {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+
+.menu-toggle span {
+    display: block;
+
+    width: 26px;
+    height: 2px;
+
+    background: white;
+
+    margin: 6px auto;
+
+    transition: 0.3s ease;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    /*
+       HERO IMAGE PLACEHOLDER
+
+       Put your image in:
+       images/hero-knight.jpg
+    */
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 11, 16, 0.97) 0%,
+            rgba(8, 11, 16, 0.77) 45%,
+            rgba(8, 11, 16, 0.25) 100%
+        ),
+        url("images/hero-knight.jpg")
+        center / cover
+        no-repeat;
+}
+
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 240px;
+
+    background: linear-gradient(
+        transparent,
+        var(--background)
+    );
+}
+
+
+.hero-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 65% 45%,
+            transparent,
+            rgba(0, 0, 0, 0.45)
+        );
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    padding-top: 100px;
+}
+
+
+.hero-description {
+    max-width: 670px;
+
+    font-size: 1.15rem;
+
+    margin-bottom: 35px;
+}
+
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+
+.button {
+    min-height: 50px;
+
+    padding: 14px 25px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+
+.primary-button {
+    background: var(--gold);
+    color: #15100a;
+}
+
+
+.primary-button:hover {
+    background: var(--gold-light);
+}
+
+
+.secondary-button {
+    border-color: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+
+.secondary-button:hover {
+    border-color: var(--gold);
+}
+
+
+.scroll-indicator {
+    position: absolute;
+
+    z-index: 3;
+
+    bottom: 45px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 0.7rem;
+
+    color: var(--text-muted);
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.12rem;
+}
+
+
+.scroll-line {
+    width: 1px;
+    height: 45px;
+
+    background: linear-gradient(
+        var(--gold),
+        transparent
+    );
+}
+
+
+/* =========================================================
+   TWO COLUMN LAYOUT
+   ========================================================= */
+
+.two-column {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    align-items: center;
+
+    gap: 75px;
+}
+
+
+.section-text p {
+    margin-bottom: 20px;
+    font-size: 1.03rem;
+}
+
+
+/* =========================================================
+   IMAGE PLACEHOLDERS
+   ========================================================= */
+
+.image-frame {
+    position: relative;
+
+    min-height: 500px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            135deg,
+            #18202a,
+            #0c1017
+        );
+}
+
+
+.image-frame img {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    inset: 0;
+
+    object-fit: contain;
+
+    padding: 25px;
+}
+
+
+.image-placeholder-text {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    z-index: 3;
+
+    padding: 8px 12px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1rem;
+
+    color: white;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FEATURES
+   ========================================================= */
+
+.features-section {
+    background: var(--background-light);
+}
+
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.feature-card {
+    padding: 35px;
+
+    min-height: 260px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.04),
+            transparent
+        );
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.feature-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(232, 183, 90, 0.55);
+}
+
+
+.feature-icon {
+    width: 54px;
+    height: 54px;
+
+    display: grid;
+    place-items: center;
+
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(232, 183, 90, 0.3);
+
+    color: var(--gold);
+
+    font-size: 1.5rem;
+}
+
+
+/* =========================================================
+   WEAPONS
+   ========================================================= */
+
+.weapon-grid {
+    display: grid;
+    gap: 30px;
+}
+
+
+.weapon-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(300px, 0.8fr)
+        1fr;
+
+    min-height: 400px;
+
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    background: var(--background-card);
+}
+
+
+.weapon-card:nth-child(even) .weapon-image {
+    order: 2;
+}
+
+
+.weapon-card:nth-child(even) .weapon-info {
+    order: 1;
+}
+
+
+.weapon-image {
+    position: relative;
+
+    min-height: 390px;
+
+    background:
+        radial-gradient(
+            circle,
+            #202937,
+            #0c1118
+        );
+}
+
+
+.weapon-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 45px;
+}
+
+
+.image-label {
+    position: absolute;
+
+    left: 15px;
+    bottom: 15px;
+
+    padding: 7px 10px;
+
+    background: rgba(0, 0, 0, 0.72);
+
+    color: white;
+
+    font-size: 0.65rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1rem;
+}
+
+
+.weapon-info {
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.weapon-number {
+    color: var(--gold);
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.2rem;
+
+    margin-bottom: 16px;
+}
+
+
+.weapon-info ul {
+    list-style: none;
+
+    margin-top: 25px;
+
+    display: grid;
+
+    gap: 10px;
+}
+
+
+.weapon-info li {
+    color: #d2d7df;
+}
+
+
+.weapon-info li::before {
+    content: "◆";
+
+    color: var(--gold);
+
+    margin-right: 10px;
+
+    font-size: 0.55rem;
+}
+
+
+/* =========================================================
+   WORLDS
+   ========================================================= */
+
+.worlds-section {
+    background: var(--background-light);
+}
+
+
+.world-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+
+.world-card {
+    border: 1px solid var(--border);
+
+    background: var(--background-card);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.world-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(232, 183, 90, 0.5);
+}
+
+
+.world-image {
+    height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111821;
+}
+
+
+.world-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.world-card:hover .world-image img {
+    transform: scale(1.05);
+}
+
+
+.world-number {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 8px 12px;
+
+    background: rgba(8, 11, 16, 0.8);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    font-size: 0.7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.1rem;
+}
+
+
+.world-content {
+    padding: 30px;
+}
+
+
+.world-content p {
+    margin-bottom: 20px;
+}
+
+
+.world-tag {
+    color: var(--gold);
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.08rem;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ARTIFACT
+   ========================================================= */
+
+.artifact-section {
+    overflow: hidden;
+}
+
+
+.artifact-frame {
+    min-height: 520px;
+}
+
+
+.artifact-stats {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    margin-top: 40px;
+
+    border-top: 1px solid var(--border);
+
+    border-bottom: 1px solid var(--border);
+}
+
+
+.artifact-stats div {
+    padding: 18px 12px;
+}
+
+
+.artifact-stats div:not(:last-child) {
+    border-right: 1px solid var(--border);
+}
+
+
+.artifact-stats strong {
+    display: block;
+
+    color: var(--gold);
+
+    margin-bottom: 3px;
+}
+
+
+.artifact-stats span {
+    color: var(--text-muted);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   ENEMIES
+   ========================================================= */
+
+.enemies-section {
+    background: var(--background-light);
+}
+
+
+.enemy-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.enemy-card {
+    padding-bottom: 30px;
+
+    border: 1px solid var(--border);
+
+    background: var(--background-card);
+
+    overflow: hidden;
+}
+
+
+.enemy-card h3,
+.enemy-card p {
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+.enemy-image {
+    height: 330px;
+
+    position: relative;
+
+    margin-bottom: 25px;
+
+    background:
+        radial-gradient(
+            circle,
+            #222b37,
+            #0b1016
+        );
+}
+
+
+.enemy-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 30px;
+}
+
+
+/* =========================================================
+   FINAL BOSS
+   ========================================================= */
+
+.boss-section {
+    min-height: 720px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.boss-background {
+    position: absolute;
+
+    inset: 0;
+}
+
+
+.boss-background img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.boss-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(7, 8, 12, 0.35),
+            rgba(7, 8, 12, 0.95)
+        ),
+        radial-gradient(
+            circle at center,
+            rgba(128, 28, 42, 0.15),
+            transparent 55%
+        );
+}
+
+
+.boss-content {
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 800px;
+}
+
+
+.boss-content p:not(.section-label) {
+    font-size: 1.1rem;
+
+    max-width: 680px;
+
+    margin: 0 auto 30px;
+}
+
+
+.boss-warning {
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    border: 1px solid #c45a69;
+
+    color: #ff8c99;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.25rem;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.cta-section {
+    text-align: center;
+}
+
+
+.cta-container {
+    max-width: 850px;
+}
+
+
+.cta-container p:not(.section-label) {
+    max-width: 600px;
+
+    margin:
+        0 auto
+        30px;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    padding: 60px 0;
+
+    border-top: 1px solid var(--border);
+
+    background: #05070a;
+}
+
+
+.footer-container {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        auto;
+
+    gap: 40px;
+
+    align-items: center;
+}
+
+
+.footer-container > div:first-child p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+
+.footer-links {
+    display: flex;
+
+    gap: 25px;
+
+    color: var(--text-muted);
+
+    font-size: 0.85rem;
+}
+
+
+.footer-links a:hover {
+    color: var(--gold);
+}
+
+
+.copyright {
+    grid-column: 1 / -1;
+
+    padding-top: 25px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL ANIMATION
+
+   JavaScript adds the "visible" class.
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+
+.reveal.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 950px) {
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .enemy-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .enemy-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+
+    .two-column {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    .image-frame {
+        min-height: 480px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    /* Mobile navigation */
+
+    .menu-toggle {
+        display: block;
+
+        position: relative;
+
+        z-index: 1002;
+    }
+
+
+    .nav {
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: min(82vw, 360px);
+        height: 100vh;
+
+        padding: 110px 35px 35px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+
+        background: #0a0e14;
+
+        border-left: 1px solid var(--border);
+
+        transition: right 0.3s ease;
+
+        z-index: 1001;
+    }
+
+
+    .nav.active {
+        right: 0;
+    }
+
+
+    .nav a {
+        font-size: 1.2rem;
+    }
+
+
+    .menu-toggle.active span:nth-child(1) {
+        transform:
+            translateY(8px)
+            rotate(45deg);
+    }
+
+
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .menu-toggle.active span:nth-child(3) {
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 850px;
+
+        background:
+            linear-gradient(
+                rgba(8, 11, 16, 0.52),
+                rgba(8, 11, 16, 0.97)
+            ),
+            url("images/hero-knight.jpg")
+            center / cover
+            no-repeat;
+    }
+
+
+    .hero-content {
+        padding-top: 120px;
+    }
+
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .button {
+        width: 100%;
+    }
+
+
+    .scroll-indicator {
+        display: none;
+    }
+
+
+    /* Features */
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Weapons */
+
+    .weapon-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .weapon-card:nth-child(even) .weapon-image,
+    .weapon-card:nth-child(even) .weapon-info {
+        order: initial;
+    }
+
+
+    .weapon-image {
+        min-height: 320px;
+    }
+
+
+    .weapon-info {
+        padding: 35px 25px;
+    }
+
+
+    /* Worlds */
+
+    .world-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .world-image {
+        height: 270px;
+    }
+
+
+    /* Artifact */
+
+    .artifact-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .artifact-stats div:not(:last-child) {
+        border-right: 0;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* Enemies */
+
+    .enemy-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .enemy-card:last-child {
+        grid-column: auto;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 92%;
+    }
+
+
+    h1 {
+        font-size: 3rem;
+    }
+
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+
+    .image-frame {
+        min-height: 350px;
+    }
+
+
+    .enemy-image {
+        height: 280px;
+    }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   Reduce animations if the user has disabled motion.
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+    }
+
+}
