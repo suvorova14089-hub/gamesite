@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on phones/tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Guardian's Oath - A 2D platformer about a young knight armed with a sword and a magical gun."
+    >
+
+    <title>Guardian's Oath | 2D Platformer</title>
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ======================================================
+         HEADER / NAVIGATION
+         ====================================================== -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+
+            <!-- Game logo / title -->
+            <a href="#home" class="logo">
+                Guardian's <span>Oath</span>
+            </a>
+
+            <!-- Mobile menu button -->
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <a href="#home">Home</a>
+                <a href="#story">Story</a>
+                <a href="#weapons">Weapons</a>
+                <a href="#worlds">Worlds</a>
+                <a href="#enemies">Enemies</a>
+                <a href="#boss">Dark Lord</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- ======================================================
+             HERO SECTION
+
+             IMAGE PLACEHOLDER:
+             Replace images/hero-knight.jpg with your main game artwork.
+             ====================================================== -->
+        <section class="hero" id="home">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-content">
+
+                <p class="eyebrow">
+                    A 2D Action Platformer
+                </p>
+
+                <h1>
+                    Rise. Fight.
+                    <span>Defeat the Darkness.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Take control of a young knight chosen by an ancient
+                    guardian. Wield a legendary sword and a mysterious
+                    magical gun as you journey across four dangerous worlds.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#story" class="button primary-button">
+                        Discover the Story
+                    </a>
+
+                    <a href="#worlds" class="button secondary-button">
+                        Explore the Worlds
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="scroll-indicator">
+                <span>Scroll to explore</span>
+                <div class="scroll-line"></div>
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             STORY SECTION
+             ====================================================== -->
+        <section class="section story-section" id="story">
+
+            <div class="container two-column">
+
+                <div class="section-text reveal">
+
+                    <p class="section-label">
+                        The Journey Begins
+                    </p>
+
+                    <h2>
+                        A Young Knight.
+                        <span>An Ancient Destiny.</span>
+                    </h2>
+
+                    <p>
+                        Long ago, darkness was sealed away by an ancient
+                        guardian. But the seal has weakened, and monsters
+                        have begun spreading across the kingdom once again.
+                    </p>
+
+                    <p>
+                        A young knight discovers the guardian deep within
+                        forgotten ruins. Seeing courage within the hero,
+                        the guardian grants him a mysterious magical weapon.
+                    </p>
+
+                    <p>
+                        Armed with both steel and magic, the knight must
+                        travel across four corrupted worlds, recover ancient
+                        artifacts, defeat powerful monsters, and face the
+                        Dark Lord before the kingdom falls forever.
+                    </p>
+
+                </div>
+
+
+                <!-- CHARACTER IMAGE PLACEHOLDER
+                     Replace images/knight-character.png -->
+                <div class="image-frame character-frame reveal">
+
+                    <img
+                        src="https://i.postimg.cc/6600byX4/Chat-GPT-Image-Oct-2-2026-at-07-09-20-PM-1.png"
+                        alt="Young knight main character"
+                    >
+
+                    <div class="image-placeholder-text">
+                        Character Artwork
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             GAMEPLAY FEATURES
+             ====================================================== -->
+        <section class="section features-section">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Gameplay
+                    </p>
+
+                    <h2>
+                        Master Steel.
+                        <span>Command Magic.</span>
+                    </h2>
+
+                    <p>
+                        Switch between close-range sword combat and powerful
+                        magical attacks to survive increasingly dangerous enemies.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            ⚔
+                        </div>
+
+                        <h3>Sword Combat</h3>
+
+                        <p>
+                            Strike monsters with fast sword attacks,
+                            aerial combos, charged attacks and special moves.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            ✦
+                        </div>
+
+                        <h3>Magical Gun</h3>
+
+                        <p>
+                            Use the guardian's mysterious weapon to attack
+                            enemies from a distance and unlock supernatural powers.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            ◆
+                        </div>
+
+                        <h3>Ancient Artifacts</h3>
+
+                        <p>
+                            Search secret areas and hidden paths to discover
+                            powerful artifacts left behind by ancient civilizations.
+                        </p>
+
+                    </article>
+
+
+                    <article class="feature-card reveal">
+
+                        <div class="feature-icon">
+                            ☠
+                        </div>
+
+                        <h3>Dangerous Enemies</h3>
+
+                        <p>
+                            Battle corrupted creatures, armored monsters,
+                            supernatural enemies and massive bosses.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             WEAPONS SECTION
+             ====================================================== -->
+        <section class="section weapons-section" id="weapons">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Your Arsenal
+                    </p>
+
+                    <h2>
+                        Two Weapons.
+                        <span>One Hero.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="weapon-grid">
+
+                    <!-- SWORD IMAGE PLACEHOLDER
+                         Replace images/sword.png -->
+                    <article class="weapon-card reveal">
+
+                        <div class="weapon-image">
+
+                            <img
+                                src="https://i.postimg.cc/RFvtwLqD/Chat-GPT-Image-Oct-2-2026-at-07-09-22-PM-4.png"
+                                alt="Knight's sword"
+                            >
+
+                            <span class="image-label">
+                                Sword Image
+                            </span>
+
+                        </div>
+
+                        <div class="weapon-info">
+
+                            <span class="weapon-number">
+                                01
+                            </span>
+
+                            <h3>The Knight's Sword</h3>
+
+                            <p>
+                                Your primary close-range weapon. Fast,
+                                reliable and deadly when mastered.
+                            </p>
+
+                            <ul>
+                                <li>Fast melee attacks</li>
+                                <li>Air combos</li>
+                                <li>Charged attacks</li>
+                                <li>Unlockable techniques</li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MAGIC GUN IMAGE PLACEHOLDER
+                         Replace images/magic-gun.png -->
+                    <article class="weapon-card reveal">
+
+                        <div class="weapon-image">
+
+                            <img
+                                src="https://i.postimg.cc/zDthRWNk/Chat-GPT-Image-Oct-2-2026-at-07-09-22-PM-5.png"
+                                alt="Ancient magical gun"
+                            >
+
+                            <span class="image-label">
+                                Magic Gun Image
+                            </span>
+
+                        </div>
+
+                        <div class="weapon-info">
+
+                            <span class="weapon-number">
+                                02
+                            </span>
+
+                            <h3>The Guardian's Weapon</h3>
+
+                            <p>
+                                An ancient magical firearm given to the knight
+                                by the guardian. Its true origin remains unknown.
+                            </p>
+
+                            <ul>
+                                <li>Long-range attacks</li>
+                                <li>Magical projectiles</li>
+                                <li>Upgradeable abilities</li>
+                                <li>Environmental interactions</li>
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             FOUR WORLDS SECTION
+
+             Replace each world image with screenshots or artwork.
+             ====================================================== -->
+        <section class="section worlds-section" id="worlds">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Explore
+                    </p>
+
+                    <h2>
+                        Four Worlds.
+                        <span>Four Deadly Trials.</span>
+                    </h2>
+
+                    <p>
+                        Each world introduces new enemies, environments,
+                        mechanics, secrets and powerful bosses.
+                    </p>
+
+                </div>
+
+
+                <div class="world-grid">
+
+
+                    <!-- WORLD 1 IMAGE -->
+                    <article class="world-card reveal">
+
+                        <div class="world-image">
+
+                            <img
+                                src="https://i.postimg.cc/sfNB2r9F/Chat-GPT-Image-Oct-2-2026-at-07-09-23-PM-6.png"
+                                alt="Greenwood Ruins game world"
+                            >
+
+                            <div class="world-number">
+                                World 01
+                            </div>
+
+                            <div class="image-placeholder-text">
+                                World 1 Image
+                            </div>
+
+                        </div>
+
+                        <div class="world-content">
+
+                            <h3>Greenwood Ruins</h3>
+
+                            <p>
+                                Ancient forests hide forgotten temples,
+                                dangerous creatures and the remains of a
+                                civilization lost to time.
+                            </p>
+
+                            <span class="world-tag">
+                                Forest • Ruins
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- WORLD 2 IMAGE -->
+                    <article class="world-card reveal">
+
+                        <div class="world-image">
+
+                            <img
+                                src="https://i.postimg.cc/MTrGX7Bv/Chat-GPT-Image-Oct-2-2026-at-07-09-24-PM-7.png"
+                                alt="Crystal Caverns game world"
+                            >
+
+                            <div class="world-number">
+                                World 02
+                            </div>
+
+                            <div class="image-placeholder-text">
+                                World 2 Image
+                            </div>
+
+                        </div>
+
+                        <div class="world-content">
+
+                            <h3>Crystal Caverns</h3>
+
+                            <p>
+                                Descend beneath the kingdom into glowing
+                                caverns filled with strange crystals,
+                                underground creatures and ancient machinery.
+                            </p>
+
+                            <span class="world-tag">
+                                Caverns • Crystals
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- WORLD 3 IMAGE -->
+                    <article class="world-card reveal">
+
+                        <div class="world-image">
+
+                            <img
+                                src="https://i.postimg.cc/pXjdXnLf/Chat-GPT-Image-Oct-2-2026-at-07-09-24-PM-8.png"
+                                alt="Ashen Wastes game world"
+                            >
+
+                            <div class="world-number">
+                                World 03
+                            </div>
+
+                            <div class="image-placeholder-text">
+                                World 3 Image
+                            </div>
+
+                        </div>
+
+                        <div class="world-content">
+
+                            <h3>Ashen Wastes</h3>
+
+                            <p>
+                                A ruined land consumed by fire where
+                                corrupted warriors and monstrous creatures
+                                patrol the remains of fallen cities.
+                            </p>
+
+                            <span class="world-tag">
+                                Fire • Wasteland
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- WORLD 4 IMAGE -->
+                    <article class="world-card reveal">
+
+                        <div class="world-image">
+
+                            <img
+                                src="https://i.postimg.cc/BncQ29D3/Chat-GPT-Image-Oct-2-2026-at-07-09-25-PM-9.png"
+                                alt="Shadow Citadel game world"
+                            >
+
+                            <div class="world-number">
+                                World 04
+                            </div>
+
+                            <div class="image-placeholder-text">
+                                World 4 Image
+                            </div>
+
+                        </div>
+
+                        <div class="world-content">
+
+                            <h3>Shadow Citadel</h3>
+
+                            <p>
+                                Enter the Dark Lord's domain where reality
+                                itself begins to collapse and the strongest
+                                monsters guard the final path.
+                            </p>
+
+                            <span class="world-tag">
+                                Darkness • Castle
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             ARTIFACT SECTION
+             ====================================================== -->
+        <section class="section artifact-section">
+
+            <div class="container two-column">
+
+
+                <!-- ARTIFACT IMAGE PLACEHOLDER
+                     Replace images/artifact.png -->
+                <div class="image-frame artifact-frame reveal">
+
+                    <img
+                        src="https://i.postimg.cc/vBjQGQR6/Chat-GPT-Image-Oct-2-2026-at-07-09-21-PM-3.png"
+                        alt="Ancient magical artifact"
+                    >
+
+                    <div class="image-placeholder-text">
+                        Artifact Image
+                    </div>
+
+                </div>
+
+
+                <div class="section-text reveal">
+
+                    <p class="section-label">
+                        Hidden Power
+                    </p>
+
+                    <h2>
+                        Discover
+                        <span>Ancient Artifacts.</span>
+                    </h2>
+
+                    <p>
+                        Powerful relics are hidden throughout the four worlds.
+                        Some are protected by monsters. Others require you to
+                        uncover secret passages or complete difficult challenges.
+                    </p>
+
+                    <p>
+                        Artifacts can strengthen the knight, enhance his
+                        weapons, unlock new abilities and reveal forgotten
+                        pieces of the world's history.
+                    </p>
+
+
+                    <div class="artifact-stats">
+
+                        <div>
+                            <strong>Explore</strong>
+                            <span>Secret Areas</span>
+                        </div>
+
+                        <div>
+                            <strong>Collect</strong>
+                            <span>Rare Relics</span>
+                        </div>
+
+                        <div>
+                            <strong>Upgrade</strong>
+                            <span>Your Powers</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             ENEMIES SECTION
+             ====================================================== -->
+        <section class="section enemies-section" id="enemies">
+
+            <div class="container">
+
+                <div class="section-heading reveal">
+
+                    <p class="section-label">
+                        Face the Darkness
+                    </p>
+
+                    <h2>
+                        Monsters Stand
+                        <span>In Your Way.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="enemy-grid">
+
+
+                    <!-- ENEMY 1 IMAGE -->
+                    <article class="enemy-card reveal">
+
+                        <div class="enemy-image">
+
+                            <img
+                                src="https://i.postimg.cc/jqp7XTWK/Chat-GPT-Image-Oct-2-2026-at-07-09-03-PM.png"
+                                alt="Forest monster"
+                            >
+
+                            <span class="image-label">
+                                Monster 1
+                            </span>
+
+                        </div>
+
+                        <h3>Forest Stalker</h3>
+
+                        <p>
+                            A corrupted creature that hunts through the
+                            ruins of the ancient forest.
+                        </p>
+
+                    </article>
+
+
+                    <!-- ENEMY 2 IMAGE -->
+                    <article class="enemy-card reveal">
+
+                        <div class="enemy-image">
+
+                            <img
+                                src="https://i.postimg.cc/gk4G0qPY/Chat-GPT-Image-Oct-2-2026-at-07-34-01-PM-1.png"
+                                alt="Crystal monster"
+                            >
+
+                            <span class="image-label">
+                                Monster 2
+                            </span>
+
+                        </div>
+
+                        <h3>Crystal Guardian</h3>
+
+                        <p>
+                            An ancient construct awakened by the return
+                            of dark magic.
+                        </p>
+
+                    </article>
+
+
+                    <!-- ENEMY 3 IMAGE -->
+                    <article class="enemy-card reveal">
+
+                        <div class="enemy-image">
+
+                            <img
+                                src="https://i.postimg.cc/pd5vkw5r/Chat-GPT-Image-Oct-2-2026-at-07-34-03-PM-3.png"
+                                alt="Dark knight monster"
+                            >
+
+                            <span class="image-label">
+                                Monster 3
+                            </span>
+
+                        </div>
+
+                        <h3>Fallen Knight</h3>
+
+                        <p>
+                            Once a protector of the kingdom, now corrupted
+                            by the Dark Lord.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             FINAL BOSS SECTION
+
+             DARK LORD IMAGE:
+             Replace images/dark-lord.jpg
+             ====================================================== -->
+        <section class="boss-section" id="boss">
+
+            <div class="boss-background">
+
+                <img
+                    src="https://i.postimg.cc/1XsZm4CM/Chat-GPT-Image-Oct-2-2026-at-07-09-21-PM-2.png"
+                    alt="The Dark Lord final boss"
+                >
+
+            </div>
+
+            <div class="boss-overlay"></div>
+
+
+            <div class="container boss-content reveal">
+
+                <p class="section-label">
+                    The Final Battle
+                </p>
+
+                <h2>
+                    Face the
+                    <span>Dark Lord.</span>
+                </h2>
+
+                <p>
+                    Your journey ends inside the Shadow Citadel.
+                    Every weapon, every artifact and every lesson
+                    learned will be tested in one final battle.
+                </p>
+
+                <div class="boss-warning">
+                    FINAL BOSS
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ======================================================
+             CALL TO ACTION
+             ====================================================== -->
+        <section class="section cta-section">
+
+            <div class="container cta-container reveal">
+
+                <p class="section-label">
+                    Your Adventure Awaits
+                </p>
+
+                <h2>
+                    Will You Become
+                    <span>The Guardian's Champion?</span>
+                </h2>
+
+                <p>
+                    Explore dangerous worlds, uncover hidden secrets
+                    and defeat the darkness.
+                </p>
+
+                <!-- You can later change this button to Steam,
+                     itch.io, Epic Games, etc. -->
+                <a href="#" class="button primary-button">
+                    Coming Soon
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
+    <footer class="footer">
+
+        <div class="container footer-container">
+
+            <div>
+                <a href="#home" class="logo">
+                    Guardian's <span>Oath</span>
+                </a>
+
+                <p>
+                    A 2D action platformer adventure.
+                </p>
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#story">Story</a>
+                <a href="#weapons">Weapons</a>
+                <a href="#worlds">Worlds</a>
+                <a href="#enemies">Enemies</a>
+
+            </div>
+
+
+            <p class="copyright">
+                © <span id="currentYear"></span> Guardian's Oath.
+                All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
